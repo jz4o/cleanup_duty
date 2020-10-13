@@ -71,11 +71,14 @@ Google Apps Script で書かれた、 Slack に掃除当番の通知を行う Bo
 
     1. `$ npx clasp login`
 
-    1. `$ npx clasp clone <Spread Sheet のスクリプトエディタで確認したスクリプトID>`
+    1. `$ cp .clasp.json.example .clasp.json`
 
-    1. `$ git checkout appsscript.json`
+    1. `$ vim .clasp.json`
 
-    1. `$ rm コード.js`
+        ```diff
+        - {"scriptId":""}
+        + {"scriptId":"<Spread Sheet のスクリプトエディタで確認したスクリプトID>"}
+        ```
 
     1. `$ npx clasp push`
 
