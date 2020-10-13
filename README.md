@@ -61,23 +61,23 @@ Google Apps Script で書かれた、 Slack に掃除当番の通知を行う Bo
 
     1. `$ git clone https://github.com/star-clusters/cleanup_duty.git`
 
-1. clasp をインストールする
-
-    1. https://github.com/google/clasp#install 参照
-
-1. ソースを配置する
-
-    1. `$ clasp login`
+1. 依存ライブラリをインストールする
 
     1. `$ cd path/to/cleanup_duty`
 
-    1. `$ clasp clone <Spread Sheet のスクリプトエディタで確認したスクリプトID>`
+    1. `$ npm install`
+
+1. ソースを配置する
+
+    1. `$ npx clasp login`
+
+    1. `$ npx clasp clone <Spread Sheet のスクリプトエディタで確認したスクリプトID>`
 
     1. `$ git checkout appsscript.json`
 
     1. `$ rm コード.js`
 
-    1. `$ clasp push`
+    1. `$ npx clasp push`
 
 1. 定期実行の設定を行う
 
