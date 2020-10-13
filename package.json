@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/star-clusters/cleanup_duty/issues"
   },
-  "homepage": "https://github.com/star-clusters/cleanup_duty#readme"
+  "homepage": "https://github.com/star-clusters/cleanup_duty#readme",
+  "devDependencies": {
+    "@google/clasp": "^2.3.0"
+  }
 }
