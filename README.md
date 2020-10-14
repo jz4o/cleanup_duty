@@ -61,15 +61,7 @@ Google Apps Script で書かれた、 Slack に掃除当番の通知を行う Bo
 
     1. `$ git clone https://github.com/star-clusters/cleanup_duty.git`
 
-1. 依存ライブラリをインストールする
-
-    1. `$ cd path/to/cleanup_duty`
-
-    1. `$ npm install`
-
-1. ソースを配置する
-
-    1. `$ npx clasp login`
+1. Google Apps Script プロジェクトのスクリプトIDを設定する
 
     1. `$ cp .clasp.json.example .clasp.json`
 
@@ -80,7 +72,19 @@ Google Apps Script で書かれた、 Slack に掃除当番の通知を行う Bo
         + {"scriptId":"<Spread Sheet のスクリプトエディタで確認したスクリプトID>"}
         ```
 
-    1. `$ npx clasp push`
+1. Docker コンテナを起動する
+
+    1. `$ docker-compose up -d`
+
+1. ソースを配置する
+
+    1. `$ docker exec -i cleanup_duty_clasp_1 npx clasp login --no-localhost`
+
+    1. `$ docker exec cleanup_duty_clasp_1 npx clasp push (--force)`
+
+        以下メッセージが表示される場合はかっこ内のオプションをつけて実行する
+
+        `Manifest file has been updated. Do you want to push and overwrite? (y/N)`
 
 1. 定期実行の設定を行う
 
