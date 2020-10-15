@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
-COPY package.json package-lock.json /usr/src/
-
 WORKDIR /usr/src
+
+COPY package.json package-lock.json ./
 RUN npm install
 
